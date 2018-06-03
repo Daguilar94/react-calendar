@@ -7,14 +7,13 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    const weekDaysTitles = ["Lun", "Mar", "Mie", "Jue", "Vie"]
-    const weekendDaysTitles = ["Sab", "Dom"]
+    const weekDaysTitles = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
     console.log(moment().daysInMonth())
     console.log(colombiaHolydays.getColombiaHolidaysByYear(2018));
     return (
       <div className="App">
         <div className="calendar-wrapper">
-          <DayTitles weekDaysTitles={weekDaysTitles} weekendDaysTitles={weekendDaysTitles} />
+          <DayTitles weekDaysTitles={weekDaysTitles} />
           <Weeks />
         </div>
       </div>
